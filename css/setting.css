@@ -338,11 +338,11 @@ text-transform: uppercase;
 {
 	margin-top: 300px;
 	background-color: #333333;
+	height: 242px;
 }
 .fot_Right
 {
-	display: flex;
-	justify-content: center;
+	
 }
 .fot_Right__text
 {
@@ -353,4 +353,34 @@ font-family: "PT Sans";
 font-size: 16px;
 font-weight: 700;
 line-height: 18px;
+margin-bottom: 20px;
+}
+.images__center_fot
+{
+	margin-right: 27px;
+}
+.fot_left_fo
+{
+
+color: #ffffff;
+font-family: "PT Sans";
+font-size: 16px;
+font-weight: 700;
+line-height: 18px;
+text-decoration: underline;
+display: inline-block;
+margin-left: 30px;
+}
+.-rig
+{
+	float: right;
+	margin-top: 10px;
+}
+.fot_row
+{
+	margin-top: 50px;
+}
+.fot_left
+{
+	margin-top: 50px;
 }
