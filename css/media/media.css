@@ -1,0 +1,272 @@
+@media (min-width: 970px) and (max-width: 1170px) {
+	.fot_center
+	{
+		padding-left: 100px;
+	}
+	
+}
+@media (max-width: 972px)
+{
+	.images__center_fot
+	{
+		width: 20%!important;
+	}
+	.ReV_Kurs__White
+	{
+		margin: 0!important;
+		border: none!important;
+	}
+}
+@media (max-width: 990px) and (min-width:750px)
+{
+	.Regestration__Right
+	{
+	width: 500px!important;
+	}
+	.image_SERT_Person_img
+	{
+		width: 100%;
+	}
+	.sertif_SERT_Person
+	{
+		display: flex;
+		justify-content: center;
+	}
+	.OBST_images
+	{
+		width: 100%;
+	}
+	.ReV_Kurs
+	{
+		text-align: center;
+		width: unset!important;
+	}
+	.Rev_Kurs_text
+	{
+		width: auto!important;
+		margin-bottom: -90px;
+	}
+	.Kurs__button 
+	{
+		margin-top: 0px;
+	}
+	.navig__img
+	{
+		width: 75%!important;
+	}
+	.promo__header_2
+	{
+		font-size: 22px!important;
+		    margin-right: -30px;
+	}
+	.promo__header
+	{
+		font-size: 36px !important;
+	}
+}
+@media (max-width: 760px) {
+	.in
+	{
+		background: White;
+	}
+	.text__kurs
+	{
+		margin-left: 0px!important;
+	}
+	.list__navigation
+	{
+		margin-left: 0px!important;
+		
+		margin-top: 30px!important;
+		margin-bottom: 30px !important;
+	}
+	.menu__item
+	{
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.navigation__menu__href
+	{
+		height: auto;
+		font-size: 20px!important;
+		width: auto!important;
+		text-decoration: underline;
+	}
+	.ReV_Kurs
+	{
+		text-align: center;
+		width: unset!important;
+	}
+	.Rev_Kurs_text
+	{
+		width: auto!important;
+		margin-bottom: -20px;
+	}
+	.Kurs__button 
+	{
+		margin-top: 0px;
+	}
+	.OBST_images
+	{
+		width: 100%;
+	}
+	.imag_block_OBST
+	{
+		margin-left: 60px!important;
+	}
+	.OBST_images
+	{
+		width: 80% !important;
+	}
+	.image_SERT_Person
+	{
+		display: flex;
+		justify-content: center;
+	}
+	.Regestration__Right__text
+	{
+		padding-right: 10px!important;
+	}
+	.image_SERT_Person_img
+	{
+		width: 50%;
+		height: 50%;
+	}
+	.sertif_SERT_Person
+	{
+		display: flex;
+		justify-content: center;
+	}
+	.Sert_sert_pred
+	{
+		width: 50%;
+		height: 50%;
+	}
+	.Regestration__Left__Input_text
+	{
+		width: 60%;
+	}
+	.Regestration__Right
+	{
+		width: auto;
+	}
+	.Regestration__Right
+	{
+		width: auto !important;
+	}
+	.logo__navigation
+	{
+		width: 110%;
+		height: 100%;
+	}
+}
+@media (max-width: 456px) {
+	.Kurs__button
+	{
+		width: 100%!important;
+		margin-top: 40px;
+	}
+	.Rev_Kurs_text
+	{
+		margin-bottom: 30px;
+	}
+	.promo__header
+	{
+		font-size: 19px!important;
+		padding: 0 auto !important;
+	}
+	.promo__header_2
+	{
+		width: auto!important;
+		height: auto!important;
+		font-size: 16px!important;
+		padding: 0 auto !important;
+		margin-left: 30px !important;
+	}
+	.panel__spisok
+{
+	margin-bottom: -30px!important;
+	border: none;
+}
+	
+}
+@media (max-width: 390px)
+{
+	.Kurs__button
+	{
+		width: 100%!important;
+		margin-top: 40px;
+	}
+	.Rev_Kurs_text
+	{
+		margin-bottom: 60px;
+	}
+	.Regestration__Right
+	{
+		height: 600px!important;
+	}
+}
+@media (max-width: 511px) and (min-width: 456px)
+{
+	.Regestration__Right
+	{
+		height: 650px!important;
+	}
+}
+@media (max-width: 929px) and (min-width: 320px)
+{
+		.panel__spisok
+{
+	margin-bottom: -30px!important;
+	border: none;
+}
+.text__kurs
+}
+@media (max-width: 320px)
+{
+	.panel__spisok
+	{
+		margin-bottom: -20px!important;
+	}
+}
+@media (min-width: 1400px) {
+	.promo
+	{
+		margin-left: 300px;
+	}
+	.fot_left
+	{	text-align: right;
+		display: flex;
+		flex-direction:  column;
+	}
+}
+@media (max-width: 350px)
+{
+	.Kurs__button
+	{
+		margin-top: 200px!important;
+	}
+}
+@media (max-width: 491px)
+{
+	.-um
+{
+	padding-top: 20px;
+}
+.-dus
+{
+	margin-bottom: -25px!important;
+}
+.-dasi
+{
+	margin-bottom: -5px!important;
+}
+}
+@media (max-width: 400px)
+{
+	.-pict_mas
+	{
+		margin-top: 55px!important;
+	}
+}

@@ -1,4 +1,5 @@
 @import "../bootstrap/css/bootstrap.css";
+@import "media/media.css";
 .left_text_promo
 {
 
@@ -24,7 +25,6 @@
 	height: 50px;
 	margin-top: 15px;
 
-	background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
 .list__navigation
 {
@@ -35,6 +35,8 @@
 .navigation
 {
 	background-image: url(8-layers.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .navigation__menu__href
 {
@@ -53,7 +55,8 @@ text-transform: uppercase;
 }
 .Wid_HET
 {
-	max-width: 1300px;
+	
+	min-width: 355 px;
 }
 .promo
 {
@@ -62,8 +65,7 @@ text-transform: uppercase;
 }
 .promo__header
 {
-width: 582px;
-height: 58px;
+
 color: #000000;
 font-family: "PT Sans";
 font-size: 30px;
@@ -72,7 +74,7 @@ line-height: 36px;
 text-transform: uppercase;
 text-align: right;
 float: right;
-margin-bottom: 49px;
+
 }
 .promo__header_2
 {
@@ -136,7 +138,7 @@ height: 62px;
 }
 .Kurs__text1
 {
-	width: 738px;
+
 
 color: #333333;
 font-family: "PT Sans";
@@ -154,7 +156,7 @@ line-height: 28px;
 {
 margin:0 auto;
 text-align: justify;
-	width: 846px;
+
 height: 48px;
 color: #333333;
 font-family: "PT Sans";
@@ -211,7 +213,7 @@ color: #333333;
 font-family: "PT Sans";
 font-size: 16px;
 font-weight: 400;
-line-height: 28px;
+line-height: 20px;
 font-weight: 700;
 }
 .spisok
@@ -336,7 +338,7 @@ text-transform: uppercase;
 }
 .fot
 {
-	margin-top: 300px;
+	margin-top: 30px;
 	background-color: #333333;
 	height: 242px;
 }
@@ -346,8 +348,7 @@ text-transform: uppercase;
 }
 .fot_Right__text
 {
-	width: 188px;
-height: 14px;
+
 color: #ffffff;
 font-family: "PT Sans";
 font-size: 16px;
@@ -382,5 +383,109 @@ margin-left: 30px;
 }
 .fot_left
 {
+	margin-top: 20px;
+}
+.panel 
+{
+	border: none;
+	border-top : 2px solid #4facfe;
+	
+}
+.panel-default > .panel-heading
+{
+	background: transparent;
+	border: none;
+}
+
+.Question_Quest
+{
+	color: #000000;
+font-family: "PT Sans";
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+}
+.gp
+{
+	float: right;
+}
+.panel-title {
+	margin-top: 10px;
+	}
+.-last_panel
+{
+	border-bottom: 2px solid #4facfe;
+}
+.Question__header
+{
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 60px;
+}
+.bs-example
+{
+
+	margin-left: 0px;
+}
+.Question_Quest::visited
+{
+ text-decoration: none;
+}
+.Question__answer
+{
+padding-left: 15px;
+color: #000000;
+font-family: "PT Sans";
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+}
+.footer__mobile__image
+{
+	display: flex;
+	justify-content: center;
+	
+}
+.-pict_mas
+{
+	margin-top: 30px;
+}
+.-trm
+{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 60px;
+	width: unset !important;
+	
+}
+.-tsm
+{
+	text-align: center;
+	width: auto !important;
 	margin-top: 50px;
+}
+.-f
+{
+	margin-top: 0px!important;
+}
+.-hf
+{
+	height: 300px !important;
+}
+.panel__spisok
+{
+	
+	border: none;
+}
+.-testing
+{
+	margin-top: -30px;
+}
+.etc
+{
+	background-image: none;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group
+{
+border: none;
 }

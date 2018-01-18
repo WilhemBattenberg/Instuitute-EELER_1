@@ -12,9 +12,51 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+
+
+	<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+    .panel-title .glyphicon{
+        font-size: 14px;
+    }
+	</style>
+	<script>
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.in").each(function(){
+        	$(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });
+    });
+	</script>
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body class="Wid_HET">
-<nav class="navbar navbar-default navigation">
+
+
+
+
+
+
+<nav class="navbar navbar-default navigation container-fluid">
   <div class="container-fluid">
     <div class="navbar-header col-lg-12">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
@@ -22,10 +64,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="col-lg-6">
-      	<a class="navbar-brand" href="#"><img src="images/navigation/promo.png"></a>
+      <div class="col-lg-6 col-md-10 col-sm-6 navig__img col-xs-9">
+      	<a class="navbar-brand" href="#"><img src="images/navigation/promo.png" class="logo__navigation"></a>
   	  </div>
-      <div class="col-lg-6 left__menu">
+      <div class="col-lg-6 col-md-2 col-sm-3 hidden-xs left__menu">
       	<div class="left_text_promo">
       		<a href="#" class="href_navig"> Личный кабинет </a>
       		<a href="#" class="href_navig"> Оплата </a>
@@ -38,6 +80,8 @@
     		<li class="menu__item"><a href="#" class="navigation__menu__href">Программа курса</a></li>
     		<li class="menu__item"><a href="#" class="navigation__menu__href">Вопросы</a></li>
     		<li class="menu__item"><a href="#" class="navigation__menu__href">Стоимость</a></li>
+    		<li class="menu__item"><a href="#" class="navigation__menu__href">Личный кабинет</a></li>
+    		<li class="menu__item"><a href="#" class="navigation__menu__href hidden-sm hidden-md hidden-lg">Оплата</a></li>
     	</ul>
     </div>
   </div>
@@ -49,13 +93,13 @@
   </div>
 </nav>
 <div class="Kurs container-fluid">
-	<div class="text__kurs col-lg-7">
+	<div class="text__kurs col-lg-7 col-md-7 col-xs-12">
 		<p class="Kurs__text1">Курс Санкт-Петербургского института внешнеэкономических связей, экономики и права <b>посвящен актуальным изменениям в законодательстве, регламентирующем размещение государственных 
 		и муниципальных заказов.</b></p>
 		<p class="Kurs__text1">
 		Материал будет полезен тем, кто участвует в открытых конкурсах, электронных аукционах, запросах котировок, запросах предложений в соответствии с положениями 44-ФЗ: руководителям и специалистам федеральных, региональных и муниципальных органов власти, бюджетных учреждений, отвечающих за закупки товаров, работ, услуг (руководителей, работников контрактной службы, контрактных управляющих), членов комиссии заказчика, а также для руководителей и специалистов тендерных и юридических отделов.</p>
 	</div>
-	<div class="block__Kurs col-lg-4">
+	<div class="block__Kurs col-lg-4 col-md-3 col-xs-12">
 		<div class="ReV_Kurs__White">
 			<div class="ReV_Kurs">
 					<p class="Rev_Kurs_text"><b>Основная цель данного курса -</b> 	повышение квалификации 
@@ -71,29 +115,325 @@
 	<h1 class="Text_Picture_OBSTR">94 часа авторских лекций, 26 часов практических занятий, 7 тестов и 25 пошаговых инструкций 
 		для того чтобы соответствовать государственному стандарту в области закупок по 44 фз:</h1>
 	<div class="row container">
-		<div class="col-lg-6 Picture_OBST_block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Picture_OBST_block">
 			<div class="OBST__text">
 				<h1 class="text__OBS">До обучения:</h1>
 			</div>
 			<div class="imag_block_OBST">
-				<img src="images/OBST/1.png">
+				<img src="images/OBST/1.png" class="OBST_images">
 			</div>
 		</div>
-		<div class="col-lg-6 Picture_OBST_block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Picture_OBST_block">
 			<div class="OBST__text">
 				<h1 class="text__OBS">После обучения:</h1>
 			</div>
 			<div class="imag_block_OBST">
-				<img src="images/OBST/2.png">
+				<img src="images/OBST/2.png" class="OBST_images">
 			</div>
 		</div>
 	</div>
 </div>
 <div class="Program_Kurs container-fluid">
 	<h1 class="header__Program_Kurs">Программа курса</h1>
-		<div class="row container-fluid">
 
-			<div class="Program_Kurs__menu col-lg-4">
+		<div class="hidden-md hidden-lg bak">
+			<div class="panel panel-default panel__spisok -dus -dasi">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_1" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">1. Предмет и цели контрактной системы</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_1" class="panel-collapse collapse panel__spisok ">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+     			<ul class="list-unstyled list_Prog -um">
+				<li class="spisok">— Сфера применения закона 44-ФЗ;</li>
+				<li class="spisok">— Нормативное регулирование в сфере закупок;</li>
+				<li class="spisok">— Основные понятия;</li>
+				<li class="spisok">— Контрактная система в сфере закупок 
+				и принципы ее функционирования;</li>
+				<li class="spisok">— Информационное обеспечение и организация электронного документооборота;</li>
+				<li class="spisok">— Особенности закупок товаров, работ, услуг 
+				с иностранным происхождением и осуществляемых отдельным;</li>
+				<li class="spisok">— Особенности закупок, осуществляемых юридическими лицами за счет бюджетных средств.</li>
+				</ul></a></p>
+     			    </div>
+     			</div>
+     		</div>	
+			
+			<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_2" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">2. Планирование закупок</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_2" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+     			<ul class="list-unstyled list_Prog">
+					<li class="spisok"> — Планирование закупок;</li>
+					<li class="spisok"> — Обоснование закупок;</li>
+					<li class="spisok"> — Нормирование в сфере закупок;</li>
+					<li class="spisok"> — Обязательное общественное обсуждение закупок;</li>
+					<li class="spisok"> — Начальная (максимальная) цена контракта.</li>
+				</ul>
+			</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+
+			<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_3" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">3. Кадровое обеспечение</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_3" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+     					<ul class="list-unstyled list_Prog">
+							<li class="spisok">— Кадровое обеспечение процесса закупок.</li>
+						</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>
+
+			<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_4" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">4. Осуществление закупок</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_4" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+     					<ul class="list-unstyled list_Prog">
+							<li class="spisok">— Осуществление закупок. Нормативно-правовая база;</li>
+							<li class="spisok">— Требования к проведению закупок;</li>
+							<li class="spisok">— Требования к участникам закупки;</li>
+							<li class="spisok">— Описания объектов закупки;</li>
+							<li class="spisok">— Обеспечение заявок;</li>
+							<li class="spisok">— Контракт;</li>
+							<li class="spisok">— Централизованные закупки.</li>
+						</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+			
+			<div class="panel panel-default panel__spisok -dus -dasi">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_5" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">5. Возможные способы осуществления закупок</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_5" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+     					<ul class="list-unstyled list_Prog -um">
+							<li class="spisok">— Закупки у единственного поставщика;</li>
+							<li class="spisok">— Открытый конкурс;</li>
+							<li class="spisok">— Конкурс с ограниченным участием;</li>
+							<li class="spisok">— Двухэтапный конкурс;</li>
+							<li class="spisok">— Электронный аукцион;</li>
+							<li class="spisok">— Запрос котировок и предложений;</li>
+							<li class="spisok">— Закрытые способы закупки;</li>
+							<li class="spisok">— Этапы проведения закупок (общие для всех способов);</li>
+							<li class="spisok">— Описание процедуры осуществления закупок 
+							по каждому возможному способу.</li>
+						</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>
+			
+			<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_6" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="etc number_Program">6. Конкурс</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_6" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+							<ul class="list-unstyled list_Prog">
+								
+								<li class="spisok">	— Двухэтапный конкурс;</li>
+								<li class="spisok">	— Конкурс с ограниченным участием;</li>
+								<li class="spisok">	— Закрытые способы определения поставщиков (подрядчиков, исполнителей);</li>
+								<li class="spisok">	— Закрытый конкурс.</li>
+			
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>
+		
+			<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_7" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">7. Аукцион</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_7" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+							<ul class="list-unstyled list_Prog">
+					
+								<li class="spisoks">— Признание аукциона несостоявшимся;</li>
+								<li class="spisoks">— Закрытый аукцион;</li>
+								<li class="spisoks">— Запрос котировок;</li>
+								<li class="spisoks">— Запрос предложений.</li>
+
+
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>
+			
+			<div class="panel panel-default panel__spisok -dus -dasi">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_8" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">8. Осуществление закупки у единственного поставщика</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_8" class="panel-collapse collapse ">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+							<ul class="list-unstyled list_Prog -um">
+					
+								<li class="spisok">— Закупка у единственного поставщика (подрядчика, исполнителя).</li>
+
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+
+			<div class="panel panel-default panel__spisok -dus -dasi">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_9" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp "></icon> <h1 class="number_Program etc">9. Особенности осуществления отдельных видов закупок</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_9" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+							<ul class="list-unstyled list_Prog -um">
+					
+								<li class="spisok">— Ограничения и преимущества, предоставляемые заказчиком, отдельным участникам закупок.</li>
+
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+
+     		<div class="panel panel-default panel__spisok -dus -dasi">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_10" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">10. Мониторинг, аудит и контроль закупок</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_10" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+							<ul class="list-unstyled list_Prog -um">
+								<li class="spisok">— Нормативно-правовая база;</li>
+								<li class="spisok">— Мониторинг закупок;</li>
+								<li class="spisok">— Аудит в сфере закупок;</li>
+								<li class="spisok">— Требования к организации, подготовке и оформлению результатов аудита.</li>
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+			
+			<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_11" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">11. Контроль закупок</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_11" class="panel-collapse collapse Question__answer -testing">
+     			    <div class="panel-body">
+     			        <p class="">
+							<ul class="list-unstyled list_Prog">
+								<li class="spisok">— Разграничение полномочий контролирующих органов;</li>
+								<li class="spisok">— Общие положения о порядке осуществления контроля;</li>
+								<li class="spisok">— Ведомственный контроль в сфере закупок;</li>
+								<li class="spisok">— Контроль в сфере закупок, осуществляемый заказчиком;</li>
+								<li class="spisok">— Общественный контроль;</li>
+								<li class="spisok">— Реестр контрактов, заключенных заказчиками;</li>
+								<li class="spisok">— Реестр недобросовестных поставщиков (подрядчиков, исполнителей);</li>
+								<li class="spisok">— Заключительные положения.</li>
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>
+
+     		<div class="panel panel-default panel__spisok">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseCurs_12" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> <h1 class="number_Program etc">12. Дополнительные материалы</h1></a>
+     			    </h4>
+     			</div>
+     			<div id="collapseCurs_12" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer -testing">
+							<ul class="list-unstyled list_Prog">
+								<li class="spisok">	— Обжалование действий (бездействия) заказчика, иных лиц (ст. 105, 106 Закона № 44-ФЗ);</li>
+								<li class="spisok">	— Ответственность за нарушения в сфере закупок;</li>
+								<li class="spisok">	— Заключительные положения;</li>
+								<li class="spisok">	— Приложения;</li>
+								<li class="spisok">	— Сравнительный анализ основных норм Законов № 44-ФЗ и 94-ФЗ;</li>
+								<li class="spisok">	— График вступления в силу основных положений закона № 44-ФЗ.</li>
+
+							</ul>
+					</a></p>
+     			    </div>
+     			</div>
+     		</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="row container-fluid hidden-xs hidden-sm">
+
+			<div class="Program_Kurs__menu col-lg-4 col-md-4 ">
 				
 				<h1 class="number_Program">1. Предмет и цели контрактной системы</h1>
 				<ul class="list-unstyled list_Prog">
@@ -135,7 +475,7 @@
 
 			</div>
 			
-			<div class="Program_Kurs__menu col-lg-4">
+			<div class="Program_Kurs__menu col-lg-4 col-md-4 ">
 				<h1 class="number_Program">5. Возможные способы осуществления закупок</h1>
 				<ul class="list-unstyled list_Prog">
 					<li class="spisok">— Закупки у единственного поставщика;</li>
@@ -179,7 +519,7 @@
 				</ul>
 					
 			</div>
-			<div class="Program_Kurs__menu col-lg-4">
+			<div class="Program_Kurs__menu col-lg-4 col-md-4 ">
 					
 					<h1 class="number_Program -hg">9. Особенности осуществления отдельных видов закупок</h1>
 					<ul class="list-unstyled list_Prog">
@@ -223,10 +563,10 @@
 </div>
 <div class="container Sert">
 	<div class="row">
-		<div class="col-lg-4 -mg">
-			<img src="images/Sert/1.png">
+		<div class="col-lg-4 col-md-4 col-sm-3 col-xs-12 image_SERT_Person -mg">
+			<img src="images/Sert/1.png" class="image_SERT_Person_img">
 		</div>
-		<div class="col-lg-6">
+		<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
 			<p class="Sert_text">От приобретенных знаний и правильного выбора профессиональной деятельности зависят такие важные аспекты современной жизни, 
 			   как успешная самореализация, раскрытие творческого потенциала, 
 			   карьерный рост, материальное благополучие, перспективная работа 
@@ -238,14 +578,14 @@
 			для вашего профессионального роста.
 			</p>
 		</div>
-		<div class="col-lg-2 -mg">
-			<img src="images/Sert/2.png">
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 sertif_SERT_Person -mg">
+			<img src="images/Sert/2.png" class="Sert_sert_pred">
 		</div>
 	</div>
 </div>
 <div class="container Regestration">
 	<div class="row">
-		<div class="col-lg-6 Regestration__Right">
+		<div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 Regestration__Right">
 			<h1 class="Regestration__Right__header">Стоимость курса: 11 900р.</h1>
 
 			<p class="Regestration__Right__text">Оплатить курс можно двумя способами:</p>
@@ -257,7 +597,7 @@
 			в любом удобном банке, или через интернет-банк.
 			</p>
 		</div>
-		<div class="col-lg-5 Regestration__Left">
+		<div class="col-lg-5 col-md-3 col-sm-4 col-xs-12 Regestration__Left">
 			<h3 class="Regestration__Left__Header">Имя:</h3>
 			<input type="text" class="Regestration__Left__Input_text" placeholder="Введите ваше имя">
 			<h3 class="Regestration__Left__Header mar_20">Фамилия:</h3>
@@ -275,19 +615,144 @@
 
 <div class="Question container">
 	<h1 class="Question__header">Вопросы и Ответы</h1>
-	<hr>
-	<div class="dropdown open">
-		<a type="button" id="drop001" role="button" class="dropdown-toggle" data-toggle="dropdown" href="#">Предусмотрены ли скидки для группового обучения в онлайн курсе по закупкам 44-фз?<b class="caret"		></b></a>.
-		<ul class="dropdown-menu" role="menu">
-			<li><a  href="#">Перейти на сайт</a></li>
-			<li><a  href="#" target="_blank">В новой вкладке</a></li>
-		</ul>
+	 
+	<div class="bs-example">
+    	<div class="panel-group" id="accordion">
+	 		<div class="panel panel-default">
+     		       <div class="panel-heading">
+     		           <h4 class="panel-title">
+     		               <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Предусмотрены ли скидки для 		группового обучения в онлайн курсе по закупкам 44-фз?</a>
+     		           </h4>
+     		       </div>
+     		       <div id="collapseOne" class="panel-collapse collapse">
+     		           <div class="panel-body">
+     		               <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+								Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     		           </div>
+     		       </div>
+     		</div>
+     		<div class="panel panel-default">
+     		       <div class="panel-heading">
+     		           <h4 class="panel-title">
+     		               <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Может ли студент, обучающийся в ВУЗе, получить удостоверение, если у него еще нет диплома, 
+							июле его выдача состоится только в июле?</a>
+     		           </h4>
+     		       </div>
+     		       <div id="collapseTwo" class="panel-collapse collapse">
+     		           <div class="panel-body">
+     		               <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+								Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     		           </div>
+     		       </div>
+     		</div>
+     		<div class="panel panel-default">
+     		       <div class="panel-heading">
+     		           <h4 class="panel-title">
+     		               <a data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Существует ли скидка для студентов?</a>
+     		           </h4>
+     		       </div>
+     		       <div id="collapseThree" class="panel-collapse collapse">
+     		           <div class="panel-body">
+     		               <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+								Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     		           </div>
+     		       </div>
+     		</div>
+
+     		<div class="panel panel-default">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseFour" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Можно ли получить удостоверение о прохождении курса, имея только диплом о средне-специальном образовании?</a>
+     			    </h4>
+     			</div>
+     			<div id="collapseFour" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+						Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+     		
+				<div class="panel panel-default">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseEight" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Можно ли получить удостоверение о прохождении курса, имея только диплом о средне-специальном образовании?</a>
+     			    </h4>
+     			</div>
+     			<div id="collapseEight" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+						Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+
+     		<div class="panel panel-default">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseNine" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Может ли организация работодатель оплатить обучение студента в онлайн-курсе? Будут ли оформлена 
+						вся необходимая документация для оплаты?
+						</a>
+     			    </h4>
+     			</div>
+     			<div id="collapseNine" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+						Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+     		
+     		<div class="panel panel-default">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseFive" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Что делать если не приходит письмо активации?</a>
+     			    </h4>
+     			</div>
+     			<div id="collapseFive" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+						Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     			    </div>
+     			</div>
+     		</div>
+
+     		<div class="panel panel-default">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseSix" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Когда можно начать обучение по онлайн-курсу? Нужно ли дожидаться набора группы?</a>
+     			    </h4>
+     			</div>
+     			<div id="collapseSix" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+						Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     			    </div>
+     			</div>
+     		</div>	
+
+     		<div class="panel panel-default -last_panel">
+     			<div class="panel-heading">
+     			    <h4 class="panel-title">
+     			        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven" class="Question_Quest"><icon class="glyphicon glyphicon-plus gp"></icon> Какова полная стоимость курса, без всех скидок?</a>
+     			    </h4>
+     			</div>
+     			<div id="collapseSeven" class="panel-collapse collapse">
+     			    <div class="panel-body">
+     			        <p class="Question__answer">Да, наша гибкая система оплаты предполагает скидки, как для групп, так, и, например, для студентов. 
+						Узнать размер скидки можно отправив письмо на почту edm@gkomega.ru</a></p>
+     			    </div>
+     			</div>
+     		</div>				
+
+
+		</div>
 	</div>
 
 </div>
-<footer class="fot container-fluid">
+<footer class="fot container-fluid hidden-xs">
 	<div class="row fot_row">
-		<div class="col-lg-4 col-md-4 fot_Right">
+		<div class="col-lg-4 col-md-2 col-sm-3 col-xs-5 fot_Right">
 			<h1 class="fot_Right__text">Lorem ipsum dolor sit amet</h1>
 			<div class="fot_icon">
 				<img src="images/fot/1.png">
@@ -296,7 +761,7 @@
 				<img src="images/fot/4.png">
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 fot_center">
+		<div class="col-lg-4 col-md-6 col-sm-4 hidden-xs fot_center">
 			<h1 class="fot_Right__text">Способы оплаты</h1>
 			<div class="fot_icon">
 				<img src="images/fot/5.png" class="images__center_fot">
@@ -304,7 +769,7 @@
 				<img src="images/fot/7.png" class="images__center_fot">
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 fot_left">
+		<div class="col-lg-4 col-md-4 col-sm-5 col-xs-7 fot_left">
 			<div class="-rig">
 					<p class="fot_left_fo">Договор оферты</p>
 				<img src="images/fot/8.png">
@@ -312,6 +777,33 @@
 			<div class="-rig">
 					<p class="fot_left_fo">текст о персональных данных</p>
 				<img src="images/fot/8.png">
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<footer class="fot container hidden-sm hidden-md hidden-lg -hf">
+	<div class="row">
+		<div class="col-xs-6 ">
+			<p class="fot_Right__text -trm">Договор оферты</p>
+			<div class="footer__mobile__image -pict_mas">
+				<img src="images/fot/8.png">
+			</div>
+		</div>
+		<div class="col-xs-6 ">
+			<p class="fot_Right__text -trm">текст о персональных данных</p>
+			<div class="footer__mobile__image">
+				<img src="images/fot/8.png">
+			</div>
+		</div>
+		<div class="col-xs-12 fot_Right">
+			<h1 class="fot_Right__text -tsm">Lorem ipsum dolor sit amet</h1>
+			<div class="fot_icon -tsm -f">
+				<img src="images/fot/1.png">
+				<img src="images/fot/2.png">
+				<img src="images/fot/3.png">
+				<img src="images/fot/4.png">
 			</div>
 		</div>
 	</div>
